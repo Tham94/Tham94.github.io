@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "reservation restaurant et choix menus",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tham94/Tham94.github.io.git"
+  },
+  "author": "Thamime Mouhamad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tham94/Tham94.github.io/issues"
+  },
+  "homepage": "https://github.com/Tham94/Tham94.github.io#readme"
+}
