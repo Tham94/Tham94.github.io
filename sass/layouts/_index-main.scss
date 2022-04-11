@@ -1,0 +1,17 @@
+//main content of index file
+.main{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: nth($size,3);
+    background-color:$bg-color-main;
+    &__title, &__description{
+        text-align: center;
+        padding: 0 nth($size,2);
+    }
+    &__link--restaurants{
+      margin: nth($size, 3) 0;
+    }
+
+}

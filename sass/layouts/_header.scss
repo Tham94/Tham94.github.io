@@ -1,0 +1,11 @@
+.header{
+    height: 65px;
+    box-shadow: 0 3px 3px 0;
+    &__container-logo{
+        text-align: center;
+        padding: nth($size,2);
+    }
+    &-logo{
+        width: 50%;
+    }
+}

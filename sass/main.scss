@@ -2,3 +2,16 @@
 
 @import "./base/normalize";
 @import "./base/box-sizing";
+@import "./utils/variables.scss";
+@import "./base/general";
+@import "./utils/mixins";
+@import "./components/btn.scss";
+@import "./layouts/index-main";
+@import "./layouts/form";
+@import "./layouts/header";
+@import "./layouts/cards";
+@import "./layouts/footer";
+
+
+
+

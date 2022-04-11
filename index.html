@@ -8,7 +8,7 @@
     <!--add font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap">
     <!--add FontAwesome-->
         <script src="https://kit.fontawesome.com/cdc8f6d0df.js" crossorigin="anonymous"></script>
         <title>Ohmyfood</title>
@@ -16,20 +16,20 @@
 
     <body>
 
-        <header>
-            <div class="header__logo">ohmyfood</div>    
+        <header class="header">
+            <div class="header__container-logo"><img class="header-logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></div>    
         </header>
 
-        <form method="post" action="#">
+        <form class="form" method="post" action="#">
             <div class="form__map"><i class="fa-solid fa-location-dot"></i></div>
             <input class="form__input" type="text" name="ville" placeholder="Paris, Belleville">
         </form>
 
-        <main>
+        <main class="main">
             <h1 class="main__title">Réservez le menu qui vous convient</h1>
-            <p class="description">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <p class="main__description">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             <a class="main__link--restaurants" href="#card-restaurants">
-                <button class="main__btn--restaurants" type="submit">Explorer nos restaurants</button>
+                <div class="main__btn--explore">Explorer nos restaurants</div>
             </a>
         </main>
 
@@ -58,7 +58,7 @@
 
         </section>
 
-        <section class="card-restaurants">
+        <section id="card-restaurants">
 
             <h1 class="restaurants__title">Restaurants
             </h1>

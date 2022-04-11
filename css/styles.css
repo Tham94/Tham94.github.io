@@ -233,4 +233,85 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+* {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+h1, p {
+  margin: 10px 0;
+}
+
+.main__btn--explore {
+  height: 30px;
+  width: 200px;
+  padding: 10px;
+  line-height: 150%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 5px 5px rgba(200, 199, 199, 0.8);
+  border-radius: 25px;
+}
+.main__btn--explore:hover {
+  opacity: 90%;
+  box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
+}
+
+.main {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  background-color: #F6F6F6;
+}
+.main__title, .main__description {
+  text-align: center;
+  padding: 0 1em;
+}
+.main__link--restaurants {
+  margin: 1.5em 0;
+}
+
+.form {
+  height: 50px;
+  background-color: rgba(228, 228, 228, 0.8);
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+}
+.form__map {
+  padding: 1em;
+}
+.form__input {
+  font-weight: 700;
+  border: unset;
+  background-color: rgba(232, 232, 232, 0.1);
+}
+.form__input[type=text]:focus {
+  outline: none;
+}
+
+.header {
+  height: 65px;
+  box-shadow: 0 3px 3px 0;
+}
+.header__container-logo {
+  text-align: center;
+  padding: 1em;
+}
+.header-logo {
+  width: 50%;
+}
+
 /*# sourceMappingURL=styles.css.map */

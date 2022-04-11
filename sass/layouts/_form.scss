@@ -1,0 +1,19 @@
+//form of main page
+.form{
+    height: 50px;
+    background-color: $bg-color-form;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    &__map{
+        padding: nth($size,2) ;
+    }
+    &__input{
+        font-weight: 700;
+        border:unset;
+        background-color: $bg-color-form-input;
+        &[type=text]:focus{
+            outline: none;
+        }
+    }
+}
