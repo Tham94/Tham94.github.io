@@ -9,6 +9,7 @@ $shadow-color-btn: #c8c7C7CC;
 $bg-color-btn: linear-gradient($color-secondary,$color-primary);
 $white:#ffff;
 $font-color-main:rgb(105, 105, 105);
+$color-footer:rgb(64, 64, 64);
 
 //size
 $size : 0.5em 1em 1.5em 2em;
@@ -16,4 +17,7 @@ $size-btn-num: 1.8em;
 
 //button
 $fct-btn:fct__btn;
-$btn-shadow:0px 5px 5px $shadow-color-btn;
+$btn-shadow:0px 5px 10px $shadow-color-btn;
+
+//border radius
+$b-radius-card : 15px;

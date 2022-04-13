@@ -1,0 +1,37 @@
+//FOOTER
+
+footer{
+    padding: 20px;
+    height: 150px;
+    background-color: $color-footer;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer i{
+    margin-right: 10px;
+    font-size: 80%;
+}
+
+.footer{
+    &__title{
+        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+        font-size: 110%;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+    }
+    &__link{
+        &--partenaire, &--propose, &--mentions, &--contact{
+            font-size: 90%;
+            margin: 5px 0;
+        }
+        &--partenaire{
+            & i{
+                transform: rotate(-10deg);
+            }
+        }
+    }
+}
+
+
