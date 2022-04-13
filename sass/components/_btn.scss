@@ -6,10 +6,50 @@
     text-align: center;
     color: #ffff;
     background: $bg-color-btn;
-    box-shadow: 0px 5px 5px $shadow-color-btn;
+    box-shadow: $btn-shadow;
     border-radius: 25px;
     &:hover{
         opacity: 90%;
         box-shadow: 0 5px 5px darken($shadow-color-btn, 20);    
     }
+}
+
+.fct__btn{
+    &--choisir, &--composer, &--deguster{
+        @include fct__btn;
+        border-radius: 20px;
+        box-shadow: $btn-shadow;
+            &:hover{
+                background-color: lighten($color-primary,35);
+            }
+    }
+}
+
+.btn{
+    &__num{
+        &--1, &--2, &--3{
+            width: $size-btn-num;
+            height: $size-btn-num;
+            margin: -10px;
+            line-height: 180%;
+            color:$white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            font-size: 80%;
+            text-align: center;
+        }
+    }
+    &__icon{
+        &--tel, &--list, &--resto{
+            margin: 20px;
+            font-size: 110%;
+            color: $font-color-main;
+        }
+    }
+    &__text{
+        &--choisir, &--composer, &--deguster{
+            font-weight: 700;
+        }
+    }
+ 
 }
