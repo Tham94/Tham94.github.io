@@ -251,6 +251,11 @@ h1, p {
   margin: 10px 0;
 }
 
+h3 {
+  margin: 5px 0;
+  font-weight: 900;
+}
+
 .main__btn--explore {
   height: 30px;
   width: 200px;
@@ -259,7 +264,7 @@ h1, p {
   text-align: center;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 0px 5px 5px rgba(200, 199, 199, 0.8);
+  box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   border-radius: 25px;
 }
 .main__btn--explore:hover {
@@ -269,13 +274,14 @@ h1, p {
 
 .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
   height: 70px;
-  width: 80%;
+  width: 320px;
+  margin: 15px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #F6F6F6;
   border-radius: 20px;
-  box-shadow: 0px 5px 5px rgba(200, 199, 199, 0.8);
+  box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
 }
 .fct__btn--choisir:hover, .fct__btn--composer:hover, .fct__btn--deguster:hover {
   background-color: #f2eafb;
@@ -293,7 +299,7 @@ h1, p {
   text-align: center;
 }
 .btn__icon--tel, .btn__icon--list, .btn__icon--resto {
-  margin: 20px;
+  margin: 30px;
   font-size: 110%;
   color: rgb(105, 105, 105);
 }
@@ -306,23 +312,27 @@ h1, p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5em;
+  padding: 1.5em 0;
   background-color: #F6F6F6;
 }
 .main__title, .main__description {
   text-align: center;
-  padding: 0 1em;
+}
+.main__title {
+  padding: 0 2em;
 }
 .main__link--restaurants {
   margin: 1.5em 0;
 }
 .main__description {
+  padding: 0 1em;
   font-size: 120%;
   color: rgb(105, 105, 105);
 }
 
 .fonctionnement {
   height: 300px;
+  padding: 45px 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -360,6 +370,91 @@ h1, p {
 }
 .header-logo {
   width: 50%;
+}
+
+#card_restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: #F6F6F6;
+}
+
+.card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+  height: 200px;
+  width: 320px;
+}
+.card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first_letter {
+  text-transform: uppercase;
+}
+
+.restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 320px;
+  margin: 15px 0;
+  box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
+  border-radius: 15px;
+}
+.restaurants__new {
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 230px;
+  top: 20px;
+  font-size: 90%;
+  font-weight: 700;
+  background-color: #99E2D0;
+  color: #32b091;
+  border-radius: 2px;
+}
+.restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
+  height: 70%;
+  width: 100%;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-position: 0 0;
+}
+
+.img--palette, .img--enchantee, .img--francaise, .img--delice {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  padding: 20px;
+  height: 150px;
+  background-color: rgb(64, 64, 64);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+footer i {
+  margin-right: 10px;
+  font-size: 80%;
+}
+
+.footer__title {
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-size: 110%;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+.footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
+  font-size: 90%;
+  margin: 5px 0;
+}
+.footer__link--partenaire i {
+  transform: rotate(-10deg);
 }
 
 /*# sourceMappingURL=styles.css.map */

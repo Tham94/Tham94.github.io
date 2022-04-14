@@ -17,8 +17,6 @@
 .fct__btn{
     &--choisir, &--composer, &--deguster{
         @include fct__btn;
-        border-radius: 20px;
-        box-shadow: $btn-shadow;
             &:hover{
                 background-color: lighten($color-primary,35);
             }
@@ -41,7 +39,7 @@
     }
     &__icon{
         &--tel, &--list, &--resto{
-            margin: 20px;
+            margin: 30px;
             font-size: 110%;
             color: $font-color-main;
         }
