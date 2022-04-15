@@ -2,7 +2,8 @@
 
 @mixin fct__btn {
     height: 70px;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     margin: 15px 0;
     display: flex;
     flex-direction: row;
@@ -12,3 +13,8 @@
     box-shadow: $btn-shadow; 
 }
 
+@mixin main_title_font {
+    font-size: 150%;
+    font-weight: 900;
+    
+}

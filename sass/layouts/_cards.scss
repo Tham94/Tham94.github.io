@@ -1,76 +1,106 @@
 // RESTAURANT CARDS
 
-#card_restaurants{
-    display: flex;
-    flex-direction: column;
-    padding: 50px 0;
-    background-color: $bg-color-main;
+#card-restaurants{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  background-color: $bg-color-main;
   }
   
-  .card{
-    &__link{
-      &--palette, &--enchantee, &--francaise, &--delice{
-        height: 200px;
-        width: 320px;  
-      }
-    }
-    &__description{
-      &--palette, &--enchantee, &--francaise, &--delice{        
-        display: flex;
-        justify-content: space-between; 
-      }
+.card{
+  &__link{
+    &--palette, &--enchantee, &--francaise, &--delice{
+      height: 250px;
+      width: 320px;  
+      margin: 10px 0;
     }
   }
+  &__description{
+    &--palette, &--enchantee, &--francaise, &--delice{        
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 15px;
+    }
+  }
+  &__icon--heart{
+    font-size: 150%;
+  }
+}
+  
+
 .first_letter{
     text-transform: uppercase;
 }
   
-  .restaurants{
-    &__card{
-      &--palette, &--enchantee, &--francaise, &--delice{
-        display: flex;
-        flex-direction: column;
-        height: 250px;
-        width: 320px;
-        margin: 15px 0;
-        box-shadow:$btn-shadow;
-        border-radius: $b-radius-card;
-      }
-    }
-    &__new{
-      width: 70px;
-      padding: 5px;
-      text-align: center;
-      position: relative;
-      left: 230px;
-      top: 20px;
-      font-size: 90%;
-      font-weight: 700;
-      background-color: $color-tertiary;
-      color: darken($color-tertiary,30);
-      border-radius: 2px;
-      
-  
-    }
-    &__img{
-      &--palette, &--enchantee, &--francaise, &--delice{
-        height: 70%;
-        width: 100%;
-        overflow: hidden;
-        border-top-right-radius: $b-radius-card;
-        border-top-left-radius: $b-radius-card;
-        object-position: 0 0;
-      }
-    }
+.restaurants{
+  &__title{
+    @include main_title_font;
+    position: relative;
+    right: 95px;
   }
-  
-  .img{
+  &__card{
     &--palette, &--enchantee, &--francaise, &--delice{
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px;
       width: 100%;
-      object-fit: cover;
+      max-width: 320px;
+      position: relative;
+      margin-bottom: 20px;
+      box-shadow:$btn-shadow;
+      border-radius: $b-radius-card;
     }
-  
   }
-  
-  
+  &__new{
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    left: 230px;
+    top: 15px;
+    font-size: 90%;
+    font-weight: 700;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary,35);
+    border-radius: 2px;
+    
+
+  }
+  &__img{
+    &--palette, &--enchantee, &--francaise, &--delice{
+      height: 70%;
+      width: 100%;
+      overflow: hidden;
+      border-top-right-radius: $b-radius-card;
+      border-top-left-radius: $b-radius-card;
+      object-position: 0 0;
+    }
+  }
+}
+
+.img{
+  &--palette, &--enchantee, &--francaise, &--delice{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.description{
+  &__title{
+    &--palette, &--enchantee, &--francaise, &--delice{
+      font-weight: 900;
+      font-size: 120%;
+      margin: 0;
+    }
+  }
+  &__location{
+    &--palette, &--enchantee, &--francaise, &--delice{
+      font-size: 110%;
+    }
+  }    
+}

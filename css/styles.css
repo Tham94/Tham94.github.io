@@ -274,7 +274,8 @@ h3 {
 
 .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
   height: 70px;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   margin: 15px 0;
   display: flex;
   flex-direction: row;
@@ -299,7 +300,7 @@ h3 {
   text-align: center;
 }
 .btn__icon--tel, .btn__icon--list, .btn__icon--resto {
-  margin: 30px;
+  margin: 0 25px 0 35px;
   font-size: 110%;
   color: rgb(105, 105, 105);
 }
@@ -308,7 +309,6 @@ h3 {
 }
 
 .main {
-  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -331,18 +331,25 @@ h3 {
 }
 
 .fonctionnement {
-  height: 300px;
-  padding: 45px 20px;
+  width: 90%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 0px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 .fonctionnement__title {
-  width: 100%;
+  font-size: 150%;
+  font-weight: 900;
+  width: 300px;
+  margin-left: 0px;
+  align-self: flex-start;
 }
 
 .form {
-  height: 50px;
+  height: 8%;
   background-color: rgba(228, 228, 228, 0.8);
   display: flex;
   justify-content: center;
@@ -361,7 +368,7 @@ h3 {
 }
 
 .header {
-  height: 65px;
+  height: 10%;
   box-shadow: 0 3px 3px 0;
 }
 .header__container-logo {
@@ -372,32 +379,48 @@ h3 {
   width: 50%;
 }
 
-#card_restaurants {
+#card-restaurants {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 50px 0;
   background-color: #F6F6F6;
 }
 
 .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
-  height: 200px;
+  height: 250px;
   width: 320px;
+  margin: 10px 0;
 }
 .card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.card__icon--heart {
+  font-size: 150%;
 }
 
 .first_letter {
   text-transform: uppercase;
 }
 
+.restaurants__title {
+  font-size: 150%;
+  font-weight: 900;
+  position: relative;
+  right: 95px;
+}
 .restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 250px;
-  width: 320px;
-  margin: 15px 0;
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  margin-bottom: 20px;
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   border-radius: 15px;
 }
@@ -405,13 +428,13 @@ h3 {
   width: 70px;
   padding: 5px;
   text-align: center;
-  position: relative;
+  position: absolute;
   left: 230px;
-  top: 20px;
+  top: 15px;
   font-size: 90%;
   font-weight: 700;
   background-color: #99E2D0;
-  color: #32b091;
+  color: #2c9c81;
   border-radius: 2px;
 }
 .restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
@@ -427,6 +450,15 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.description__title--palette, .description__title--enchantee, .description__title--francaise, .description__title--delice {
+  font-weight: 900;
+  font-size: 120%;
+  margin: 0;
+}
+.description__location--palette, .description__location--enchantee, .description__location--francaise, .description__location--delice {
+  font-size: 110%;
 }
 
 footer {

@@ -22,7 +22,7 @@
             }
     }
 }
-
+    
 .btn{
     &__num{
         &--1, &--2, &--3{
@@ -39,10 +39,11 @@
     }
     &__icon{
         &--tel, &--list, &--resto{
-            margin: 30px;
+            margin: 0 25px 0 35px;
             font-size: 110%;
             color: $font-color-main;
         }
+        
     }
     &__text{
         &--choisir, &--composer, &--deguster{
