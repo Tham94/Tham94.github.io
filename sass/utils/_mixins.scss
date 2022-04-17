@@ -1,5 +1,5 @@
 //button
-
+//________
 @mixin fct__btn {
     height: 70px;
     width: 100%;
@@ -13,8 +13,13 @@
     box-shadow: $btn-shadow; 
 }
 
+//title font
+//____________
 @mixin main_title_font {
     font-size: 150%;
     font-weight: 900;
-    
+}
+
+@mixin transition-index {
+    transition: ease 0.7s;   
 }

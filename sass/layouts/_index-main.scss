@@ -9,7 +9,7 @@
         text-align: center;
     }
     &__title{
-      
+      @include main_title_font;
       padding: 0 nth($size,4);
     }
     &__link--restaurants{
@@ -20,7 +20,6 @@
       font-size: 120%;
       color: $font-color-main;
     }
-
 }
 
 .fonctionnement{
