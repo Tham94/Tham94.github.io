@@ -257,7 +257,7 @@ a {
   border-radius: 25px;
 }
 .main__btn--explore:hover {
-  opacity: 90%;
+  opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
   transition: ease 0.7s;
 }
@@ -303,6 +303,38 @@ a {
   font-weight: 700;
 }
 
+.btn-menu__entrees--fricassee, .btn-menu__entrees--foie-gras, .btn-menu__entrees--oeuf {
+  display: flex;
+  flex-flow: column wrap;
+  height: 70px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 13px;
+  box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
+  border-radius: 15px;
+}
+.btn-menu__entrees--fricassee:hover, .btn-menu__entrees--foie-gras:hover, .btn-menu__entrees--oeuf:hover {
+  opacity: 80%;
+  box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
+  transition: ease 0.7s;
+}
+.btn-menu__title--fricassee, .btn-menu__title--foie-gras, .btn-menu__title--oeuf {
+  font-weight: 700;
+  font-size: 110%;
+  width: 90%;
+  margin-bottom: 5px;
+}
+.btn-menu__description--fricassee, .btn-menu__description--foie-gras, .btn-menu__description--oeuf {
+  font-size: 90%;
+  width: 90%;
+}
+.btn-menu__prix--fricassee, .btn-menu__prix--foie-gras, .btn-menu__prix--oeuf {
+  height: 100%;
+  font-weight: 700;
+  font-size: 90%;
+  padding-top: 25px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -345,6 +377,51 @@ a {
   align-self: flex-start;
 }
 
+.menu__container--img {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #F6F6F6;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  position: relative;
+  bottom: 50px;
+  height: 100px;
+  margin: 0;
+  padding: 25px;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice {
+  background-color: #F6F6F6;
+  position: relative;
+  bottom: 50px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__entrees--title {
+  text-transform: uppercase;
+  margin: 0;
+  width: 40px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 1em;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.main__img--palette, .main__img--enchantee, .main__img--francaise, .main__img--delice {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .form {
   height: 8%;
   background-color: rgba(228, 228, 228, 0.8);
@@ -368,12 +445,27 @@ a {
   height: 10%;
   box-shadow: 0 3px 3px 0;
 }
-.header__container-logo {
+.header__container--logo {
   text-align: center;
   padding: 1em;
 }
-.header-logo {
+.header__logo--main {
   width: 50%;
+}
+.header__logo--menu {
+  width: 40%;
+  margin-left: 20%;
+}
+
+.header__icon--return {
+  font-size: 120%;
+  padding: 15px;
+}
+.header__menu--palette, .header__menu--enchantee, .header__menu--francaise, .header__menu--delice {
+  display: flex;
+  align-items: center;
+  height: 10%;
+  width: 100%;
 }
 
 #card-restaurants {

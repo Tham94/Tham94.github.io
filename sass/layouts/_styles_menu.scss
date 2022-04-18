@@ -1,0 +1,55 @@
+
+
+.menu{
+    &__container--img{
+        height: 250px;
+        width: 100%;
+        overflow: hidden;
+    }
+    &__title{
+        &--palette, &--enchantee, &--francaise, &--delice{
+           font-family: 'shrikhand',Arial, Helvetica, sans-serif;
+           font-weight: 400;
+           background-color: $bg-color-main;
+           border-top-left-radius: 35px;
+           border-top-right-radius: 35px;
+           position: relative;
+           bottom: 50px;
+           height: 100px;
+           margin: 0;
+           padding: 25px;
+           font-size: $size-btn-num;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        } 
+    }
+    &__entrees{
+        &--palette, &--enchantee, &--francaise, &--delice{
+            background-color: $bg-color-main;
+            position: relative;
+            bottom: 50px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        &--title{
+            text-transform: uppercase;
+            margin: 0;
+            width: 40px;
+            height: 25px;
+            font-weight: 400;
+            font-size: nth($size,2);
+            border-bottom: 3px solid $color-tertiary;
+        }
+    }
+}
+
+.main__img{
+    &--palette, &--enchantee, &--francaise, &--delice{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+

@@ -20,6 +20,13 @@
     font-weight: 900;
 }
 
-@mixin transition-index {
+@mixin transition-index{
     transition: ease 0.7s;   
+
 }
+@mixin hover-btn {
+    opacity: 80%;
+    box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
+    @include transition-index;
+}
+

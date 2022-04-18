@@ -104,11 +104,13 @@
   }    
 }
 
-.far.fa-heart:hover{
-  font-weight: bold;
-  background: linear-gradient($color-secondary,$color-primary);
-  transition: ease 0.7s;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.far.fa-heart{
+  &:hover{
+    font-weight: bold;
+    background: linear-gradient($color-secondary,$color-primary);
+    transition: ease 0.7s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 }

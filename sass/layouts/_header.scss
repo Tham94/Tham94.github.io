@@ -1,11 +1,38 @@
+// Base for header
 .header{
     height: 10%;
     box-shadow: 0 3px 3px 0;
-    &__container-logo{
+    &__container{
+        &--logo{
         text-align: center;
         padding: nth($size,2);
+        }
     }
-    &-logo{
-        width: 50%;
+    &__logo{
+        &--main{
+            width: 50%;
+        }
+        &--menu{
+            width: 40%;
+            margin-left: 20%;
+        }
+    }        
+}
+
+// Header for menu pages
+.header{
+    &__icon--return{
+        font-size: 120%;
+        padding: 15px;
+        
+    } 
+    &__menu{
+        &--palette, &--enchantee, &--francaise, &--delice{
+            display: flex;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+        }
     }
+       
 }

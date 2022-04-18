@@ -1,3 +1,4 @@
+// Explore button on main page
 .main__btn--explore{
     height: 50px;
     width: 220px;
@@ -9,9 +10,7 @@
     box-shadow: $btn-shadow;
     border-radius: 25px;
     &:hover{
-        opacity: 90%;
-        box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
-        @include transition-index;    
+        @include hover-btn;    
     }
 }
 
@@ -28,7 +27,8 @@
             }
     }
 }
-    
+
+// Fonctionnement button
 .btn{
     &__num{
         &--1, &--2, &--3{
@@ -57,4 +57,46 @@
         }
     }
  
+}
+
+// Menu selection button
+
+.btn-menu{
+    &__entrees{
+        &--fricassee, &--foie-gras, &--oeuf{
+            display: flex;
+            flex-flow:column wrap;
+            height: 70px;
+            width: 100%;
+            margin: 10px 0;
+            padding: 13px;
+            box-shadow: $btn-shadow;
+            border-radius: 15px;
+            &:hover{
+                @include hover-btn
+            }
+        }
+    }
+    &__title{
+        &--fricassee, &--foie-gras, &--oeuf{
+            font-weight: 700;
+            font-size: 110%;
+            width: 90%;
+            margin-bottom: 5px;
+        }
+    }
+    &__description{
+        &--fricassee, &--foie-gras, &--oeuf{
+            font-size: 90%;
+            width: 90%;
+        }    
+    }
+    &__prix{
+        &--fricassee, &--foie-gras, &--oeuf{
+            height: 100%;
+            font-weight: 700;
+            font-size: 90%;
+            padding-top:  25px  ;
+        }
+    }
 }
