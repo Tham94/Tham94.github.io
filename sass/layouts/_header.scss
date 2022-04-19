@@ -13,8 +13,8 @@
             width: 50%;
         }
         &--menu{
-            width: 40%;
-            margin-left: 20%;
+            margin-right: auto;
+            margin-left: auto;
         }
     }        
 }
@@ -24,13 +24,14 @@
     &__icon--return{
         font-size: 120%;
         padding: 15px;
+        position: absolute;
         
     } 
     &__menu{
         &--palette, &--enchantee, &--francaise, &--delice{
             display: flex;
             align-items: center;
-            height: 10%;
+            height: 65px;
             width: 100%;
         }
     }

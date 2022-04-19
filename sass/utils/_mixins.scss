@@ -1,4 +1,29 @@
-//button
+// Transform
+//__________
+@mixin transition-index{
+    transition: ease 0.7s;   
+}
+
+@mixin hover-btn {
+    opacity: 80%;
+    box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
+    @include transition-index;
+}
+@mixin adjust-offset{
+    position: relative;
+    bottom: 50px;
+}
+
+// _____________________________INDEX PAGE
+
+// MAIN TITLE FONT
+//____________
+@mixin main_title_font {
+    font-size: 150%;
+    font-weight: 900;
+}
+
+// FONCTIONNEMENT BUTTON
 //________
 @mixin fct__btn {
     height: 70px;
@@ -13,20 +38,83 @@
     box-shadow: $btn-shadow; 
 }
 
-//title font
-//____________
-@mixin main_title_font {
-    font-size: 150%;
-    font-weight: 900;
+// ______________________________RESTAURANT PAGES
+
+// RESTAURANT TITLE
+//__________________
+@mixin restaurant-title {
+    font-family: 'shrikhand',Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: $bg-color-main;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    position: relative;
+    bottom: 35px;
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    font-size: $size-btn-num;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
-@mixin transition-index{
-    transition: ease 0.7s;   
-
+// Section entrées, plats, desserts
+//_________________________________
+@mixin menu-section {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
 }
-@mixin hover-btn {
-    opacity: 80%;
-    box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
-    @include transition-index;
+
+// SECTION TITLE
+//_____________
+
+@mixin menu-type-title {
+    text-transform: uppercase;
+    margin: 0;
+    height: 25px;
+    font-weight: 400;
+    font-size: nth($size,2);
+    &:after {
+        content:" " ;
+        margin: 5px 0;
+        display: block;
+        height: 3px;
+        width: 40px;
+        background: $color-tertiary;
+    }
+}
+
+// MENU BUTTON
+//_____________
+
+@mixin btn-menu-selection {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20%;
+    width: 100%;
+    margin: 10px 0;
+    padding: 13px;
+    box-shadow: $btn-shadow;
+    background-color: $white;
+    border-radius: 15px;    
+}
+
+// Menu Button styles
+@mixin btn-menu-title {
+    font-weight: 700;
+    font-size: 110%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+@mixin btn-menu-description{
+    font-size: 90%;
+    width: 90%;
+}
+@mixin btn-menu-price {
+    height: 100%;
+    font-weight: 700;
+    font-size: 90%;
 }
 

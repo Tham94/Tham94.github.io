@@ -1,34 +1,38 @@
-// Explore button on main page
-.main__btn--explore{
-    height: 50px;
-    width: 220px;
-    padding: 10px;
-    line-height: 150%;
-    text-align: center;
-    color: #ffff;
-    background: $bg-color-btn;
-    box-shadow: $btn-shadow;
-    border-radius: 25px;
-    &:hover{
-        @include hover-btn;    
-    }
+// Base Button 
+.main__btn{
+    &--explore, &--commander{
+        height: 50px;
+        width: 220px;
+        padding: 10px;
+        line-height: 150%;
+        text-align: center;
+        color: #ffff;
+        background: $bg-color-btn;
+        box-shadow: $btn-shadow;
+        border-radius: 25px;
+        &:hover{
+            @include hover-btn;  
+            cursor: pointer;  
+        }
+    }    
 }
+
+// Fonctionnement button
 
 .fct__btn{
     &--choisir, &--composer, &--deguster{
         @include fct__btn;
-            &:hover{
-                background-color: lighten($color-primary,35);
-                @include transition-index;
-                cursor: pointer;
-                & i{
-                    color: $color-primary;
-                }
+        &:hover{
+            background-color: lighten($color-primary,35);
+            @include transition-index;
+            cursor: pointer;
+            & i{
+                color: $color-primary;
             }
+        }
     }
 }
 
-// Fonctionnement button
 .btn{
     &__num{
         &--1, &--2, &--3{
@@ -49,54 +53,30 @@
             font-size: 110%;
             color: $font-color-main;
         }
-        
     }
     &__text{
         &--choisir, &--composer, &--deguster{
             font-weight: 700;
         }
     }
- 
 }
 
 // Menu selection button
 
 .btn-menu{
-    &__entrees{
-        &--fricassee, &--foie-gras, &--oeuf{
-            display: flex;
-            flex-flow:column wrap;
-            height: 70px;
-            width: 100%;
-            margin: 10px 0;
-            padding: 13px;
-            box-shadow: $btn-shadow;
-            border-radius: 15px;
-            &:hover{
-                @include hover-btn
-            }
+    &__entrees, &__plats, &__desserts{
+        @include btn-menu-selection;
+        &:hover{
+            @include hover-btn
+        }        
+        &--title{
+            @include btn-menu-title
         }
-    }
-    &__title{
-        &--fricassee, &--foie-gras, &--oeuf{
-            font-weight: 700;
-            font-size: 110%;
-            width: 90%;
-            margin-bottom: 5px;
+        &--description{
+            @include btn-menu-description
         }
-    }
-    &__description{
-        &--fricassee, &--foie-gras, &--oeuf{
-            font-size: 90%;
-            width: 90%;
-        }    
-    }
-    &__prix{
-        &--fricassee, &--foie-gras, &--oeuf{
-            height: 100%;
-            font-weight: 700;
-            font-size: 90%;
-            padding-top:  25px  ;
+        &--prix{
+            @include btn-menu-price
         }
     }
 }

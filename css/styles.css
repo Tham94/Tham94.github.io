@@ -245,7 +245,7 @@ a {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.main__btn--explore {
+.main__btn--explore, .main__btn--commander {
   height: 50px;
   width: 220px;
   padding: 10px;
@@ -256,10 +256,11 @@ a {
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   border-radius: 25px;
 }
-.main__btn--explore:hover {
+.main__btn--explore:hover, .main__btn--commander:hover {
   opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
   transition: ease 0.7s;
+  cursor: pointer;
 }
 
 .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
@@ -303,36 +304,36 @@ a {
   font-weight: 700;
 }
 
-.btn-menu__entrees--fricassee, .btn-menu__entrees--foie-gras, .btn-menu__entrees--oeuf {
+.btn-menu__entrees, .btn-menu__plats, .btn-menu__desserts {
   display: flex;
-  flex-flow: column wrap;
-  height: 70px;
+  flex-wrap: wrap;
+  height: 20%;
   width: 100%;
   margin: 10px 0;
   padding: 13px;
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
+  background-color: white;
   border-radius: 15px;
 }
-.btn-menu__entrees--fricassee:hover, .btn-menu__entrees--foie-gras:hover, .btn-menu__entrees--oeuf:hover {
+.btn-menu__entrees:hover, .btn-menu__plats:hover, .btn-menu__desserts:hover {
   opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
   transition: ease 0.7s;
 }
-.btn-menu__title--fricassee, .btn-menu__title--foie-gras, .btn-menu__title--oeuf {
+.btn-menu__entrees--title, .btn-menu__plats--title, .btn-menu__desserts--title {
   font-weight: 700;
   font-size: 110%;
   width: 90%;
   margin-bottom: 5px;
 }
-.btn-menu__description--fricassee, .btn-menu__description--foie-gras, .btn-menu__description--oeuf {
+.btn-menu__entrees--description, .btn-menu__plats--description, .btn-menu__desserts--description {
   font-size: 90%;
   width: 90%;
 }
-.btn-menu__prix--fricassee, .btn-menu__prix--foie-gras, .btn-menu__prix--oeuf {
+.btn-menu__entrees--prix, .btn-menu__plats--prix, .btn-menu__desserts--prix {
   height: 100%;
   font-weight: 700;
   font-size: 90%;
-  padding-top: 25px;
 }
 
 .main {
@@ -377,6 +378,23 @@ a {
   align-self: flex-start;
 }
 
+.main__img--palette, .main__img--enchantee, .main__img--francaise, .main__img--delice {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main__btn--container {
+  width: 100%;
+  padding: 20px 0 50px 0;
+}
+.main__btn--commander {
+  margin-left: auto;
+  margin-right: auto;
+}
+.main__menu {
+  background: #F6F6F6;
+}
+
 .menu__container--img {
   height: 250px;
   width: 100%;
@@ -389,37 +407,34 @@ a {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   position: relative;
-  bottom: 50px;
-  height: 100px;
+  bottom: 35px;
   margin: 0;
-  padding: 25px;
+  padding: 20px 20px 0 20px;
   font-size: 1.8em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice {
-  background-color: #F6F6F6;
-  position: relative;
-  bottom: 50px;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-.menu__entrees--title {
+.menu__title--entrees, .menu__title--plats, .menu__title--desserts {
   text-transform: uppercase;
   margin: 0;
-  width: 40px;
   height: 25px;
   font-weight: 400;
   font-size: 1em;
-  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 10px;
 }
-
-.main__img--palette, .main__img--enchantee, .main__img--francaise, .main__img--delice {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.menu__title--entrees:after, .menu__title--plats:after, .menu__title--desserts:after {
+  content: " ";
+  margin: 5px 0;
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+}
+.menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice, .menu__plats--palette, .menu__plats--enchantee, .menu__plats--francaise, .menu__plats--delice, .menu__desserts--palette, .menu__desserts--enchantee, .menu__desserts--francaise, .menu__desserts--delice {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form {
@@ -453,18 +468,19 @@ a {
   width: 50%;
 }
 .header__logo--menu {
-  width: 40%;
-  margin-left: 20%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header__icon--return {
   font-size: 120%;
   padding: 15px;
+  position: absolute;
 }
 .header__menu--palette, .header__menu--enchantee, .header__menu--francaise, .header__menu--delice {
   display: flex;
   align-items: center;
-  height: 10%;
+  height: 65px;
   width: 100%;
 }
 
