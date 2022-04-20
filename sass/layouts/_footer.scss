@@ -12,7 +12,7 @@ footer{
     }
     @include desktop-screen{
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
         height: auto;
         font-size: 120%;
     }
@@ -37,6 +37,9 @@ footer i{
         &--partenaire, &--propose, &--mentions, &--contact{
             font-size: 90%;
             margin: 5px 0;
+            @include desktop-screen{
+                margin: 5px 15px;
+            }
         }
         &--partenaire{
             & i{

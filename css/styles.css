@@ -340,6 +340,11 @@ a {
   background-color: white;
   border-radius: 15px;
 }
+@media screen and (min-width: 768px) {
+  .btn-menu__entrees, .btn-menu__plats, .btn-menu__desserts {
+    width: 50%;
+  }
+}
 .btn-menu__entrees:hover, .btn-menu__plats:hover, .btn-menu__desserts:hover {
   opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
@@ -456,6 +461,21 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+    width: 100%;
+  }
+  .menu__title--palette i, .menu__title--enchantee i, .menu__title--francaise i, .menu__title--delice i {
+    margin: 0 20px;
+  }
+}
 .menu__title--entrees, .menu__title--plats, .menu__title--desserts {
   text-transform: uppercase;
   margin: 0;
@@ -472,10 +492,22 @@ a {
   width: 40px;
   background: #99E2D0;
 }
+@media screen and (min-width: 768px) {
+  .menu__title--entrees:after, .menu__title--plats:after, .menu__title--desserts:after {
+    margin: auto;
+    position: relative;
+    top: 5px;
+  }
+}
 .menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice, .menu__plats--palette, .menu__plats--enchantee, .menu__plats--francaise, .menu__plats--delice, .menu__desserts--palette, .menu__desserts--enchantee, .menu__desserts--francaise, .menu__desserts--delice {
   padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice, .menu__plats--palette, .menu__plats--enchantee, .menu__plats--francaise, .menu__plats--delice, .menu__desserts--palette, .menu__desserts--enchantee, .menu__desserts--francaise, .menu__desserts--delice {
+    align-items: center;
+  }
 }
 
 .form {
@@ -712,7 +744,7 @@ footer {
 @media screen and (min-width: 992px) {
   footer {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     height: auto;
     font-size: 120%;
   }
@@ -737,6 +769,11 @@ footer i {
 .footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
   font-size: 90%;
   margin: 5px 0;
+}
+@media screen and (min-width: 992px) {
+  .footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
+    margin: 5px 15px;
+  }
 }
 .footer__link--partenaire i {
   transform: rotate(-10deg);

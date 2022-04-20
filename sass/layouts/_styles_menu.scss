@@ -30,6 +30,12 @@
     &__title{ // RESTAURANT TITLE
         &--palette, &--enchantee, &--francaise, &--delice{
            @include restaurant-title;
+           @include tablet-screen{
+            & i{
+                margin: 0 20px;
+            }
+            width: 100%;
+           }
         }
         &--entrees, &--plats, &--desserts{ // TYPE OF MENU TITLE
             @include menu-type-title;
