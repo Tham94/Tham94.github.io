@@ -275,6 +275,15 @@ a {
   border-radius: 20px;
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
 }
+@media screen and (min-width: 768px) {
+  .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
+    flex-flow: column;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    max-width: unset;
+  }
+}
 .fct__btn--choisir:hover, .fct__btn--composer:hover, .fct__btn--deguster:hover {
   background-color: #f2eafb;
   transition: ease 0.7s;
@@ -282,6 +291,13 @@ a {
 }
 .fct__btn--choisir:hover i, .fct__btn--composer:hover i, .fct__btn--deguster:hover i {
   color: #9356DC;
+}
+@media screen and (min-width: 768px) {
+  .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
+    height: 100px;
+    width: 200px;
+    justify-content: flex-start;
+  }
 }
 
 .btn__num--1, .btn__num--2, .btn__num--3 {
@@ -299,6 +315,15 @@ a {
   margin: 0 25px 0 35px;
   font-size: 110%;
   color: rgb(105, 105, 105);
+}
+@media screen and (min-width: 768px) {
+  .btn__icon--tel, .btn__icon--list, .btn__icon--resto {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 150%;
+    margin: 0;
+  }
 }
 .btn__text--choisir, .btn__text--composer, .btn__text--deguster {
   font-weight: 700;
@@ -370,12 +395,28 @@ a {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    max-width: unset;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 35px 0;
+  }
+}
 .fonctionnement__title {
   font-size: 150%;
   font-weight: 900;
   width: 300px;
   margin-left: 0px;
   align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .main__img--palette, .main__img--enchantee, .main__img--francaise, .main__img--delice {
@@ -457,7 +498,6 @@ a {
 }
 
 .header {
-  height: 10%;
   box-shadow: 0 3px 3px 0;
 }
 .header__container--logo {
@@ -466,6 +506,16 @@ a {
 }
 .header__logo--main {
   width: 50%;
+}
+@media screen and (min-width: 768px) {
+  .header__logo--main {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header__logo--main {
+    width: 20%;
+  }
 }
 .header__logo--menu {
   margin-right: auto;
@@ -491,11 +541,34 @@ a {
   padding: 50px 0;
   background-color: #F6F6F6;
 }
+@media screen and (min-width: 768px) {
+  #card-restaurants {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 992px) {
+  #card-restaurants {
+    flex-flow: column;
+  }
+}
 
 .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
   height: 250px;
   width: 320px;
   margin: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+    width: 330px;
+    margin: 30px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+    width: 70%;
+    height: 350px;
+  }
 }
 .card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
   background-color: white;
@@ -505,6 +578,11 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+}
+@media screen and (min-width: 992px) {
+  .card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
+    height: 30%;
+  }
 }
 .card__icon--heart {
   font-size: 150%;
@@ -520,6 +598,13 @@ a {
   position: relative;
   right: 95px;
 }
+@media screen and (min-width: 768px) {
+  .restaurants__title {
+    width: 100%;
+    right: 0;
+    text-align: center;
+  }
+}
 .restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
   display: flex;
   flex-direction: column;
@@ -532,18 +617,30 @@ a {
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   border-radius: 15px;
 }
+@media screen and (min-width: 992px) {
+  .restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
+    max-width: unset;
+    height: 100%;
+  }
+}
 .restaurants__new {
   width: 70px;
   padding: 5px;
   text-align: center;
   position: absolute;
-  left: 240px;
+  right: 10px;
   top: 10px;
   font-size: 90%;
   font-weight: 700;
   background-color: #99E2D0;
   color: #2c9c81;
   border-radius: 2px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__new {
+    right: 20px;
+    top: 15px;
+  }
 }
 .restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
   height: 70%;
@@ -552,6 +649,11 @@ a {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   object-position: 0 0;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
+    height: 75%;
+  }
 }
 
 .img--palette, .img--enchantee, .img--francaise, .img--delice {
@@ -565,10 +667,26 @@ a {
   font-size: 120%;
   margin: 0;
 }
+@media screen and (min-width: 992px) {
+  .description__title--palette, .description__title--enchantee, .description__title--francaise, .description__title--delice {
+    font-size: 130%;
+    margin-bottom: 10px;
+  }
+}
 .description__location--palette, .description__location--enchantee, .description__location--francaise, .description__location--delice {
   font-size: 110%;
 }
+@media screen and (min-width: 992px) {
+  .description__location--palette, .description__location--enchantee, .description__location--francaise, .description__location--delice {
+    font-size: 120%;
+  }
+}
 
+@media screen and (min-width: 992px) {
+  .far.fa-heart {
+    font-size: 110%;
+  }
+}
 .far.fa-heart:hover {
   font-weight: bold;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -586,6 +704,19 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: auto;
+    font-size: 120%;
+  }
+}
 
 footer i {
   margin-right: 10px;
@@ -597,6 +728,11 @@ footer i {
   font-size: 110%;
   font-weight: 400;
   margin: 0 0 10px 0;
+}
+@media screen and (min-width: 992px) {
+  .footer__title {
+    width: 100%;
+  }
 }
 .footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
   font-size: 90%;

@@ -1,6 +1,5 @@
 // Base for header
 .header{
-    height: 10%;
     box-shadow: 0 3px 3px 0;
     &__container{
         &--logo{
@@ -11,6 +10,12 @@
     &__logo{
         &--main{
             width: 50%;
+            @include tablet-screen{
+                width: 30%;
+            }
+            @include desktop-screen{
+                width: 20%;
+            }
         }
         &--menu{
             margin-right: auto;

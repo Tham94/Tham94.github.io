@@ -7,6 +7,15 @@ footer{
     color: $white;
     display: flex;
     flex-direction: column;
+    @include tablet-screen{
+        text-align: center;
+    }
+    @include desktop-screen{
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: auto;
+        font-size: 120%;
+    }
 }
 
 footer i{
@@ -20,6 +29,9 @@ footer i{
         font-size: 110%;
         font-weight: 400;
         margin: 0 0 10px 0;
+        @include desktop-screen{
+            width: 100%;
+        }
     }
     &__link{
         &--partenaire, &--propose, &--mentions, &--contact{

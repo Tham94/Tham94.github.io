@@ -30,6 +30,11 @@
                 color: $color-primary;
             }
         }
+        @include tablet-screen{
+            height: 100px;
+            width: 200px;
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -52,7 +57,15 @@
             margin: 0 25px 0 35px;
             font-size: 110%;
             color: $font-color-main;
+            @include tablet-screen{
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+                font-size: 150%;
+                margin: 0;
+            }
         }
+
     }
     &__text{
         &--choisir, &--composer, &--deguster{
