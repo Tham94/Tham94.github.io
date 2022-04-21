@@ -9,9 +9,16 @@
     box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
     @include transition-index;
 }
+// shortcuts
+//___________
 @mixin adjust-offset{
     position: relative;
     bottom: 50px;
+}
+
+@mixin title-b-radius{
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
 }
 
 // MEDIA QUERIES
@@ -67,8 +74,7 @@
     font-family: 'shrikhand',Arial, Helvetica, sans-serif;
     font-weight: 400;
     background-color: $bg-color-main;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    @include title-b-radius;
     position: relative;
     bottom: 35px;
     margin: 0;
@@ -154,3 +160,11 @@
     font-size: 90%;
 }
 
+// ANIMATIONS
+
+// menu
+
+@mixin animate-btn {
+    animation: slideUp 1s backwards;
+
+}

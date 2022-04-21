@@ -329,6 +329,16 @@ a {
   font-weight: 700;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .btn-menu__entrees, .btn-menu__plats, .btn-menu__desserts {
   display: flex;
   flex-wrap: wrap;
@@ -364,6 +374,17 @@ a {
   height: 100%;
   font-weight: 700;
   font-size: 90%;
+}
+.btn-menu__entrees {
+  animation: slideUp 1s backwards;
+}
+.btn-menu__plats {
+  animation: slideUp 1s backwards;
+  animation-delay: 1s;
+}
+.btn-menu__desserts {
+  animation: slideUp 1s backwards;
+  animation-delay: 2s;
 }
 
 .main {

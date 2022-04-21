@@ -76,6 +76,17 @@
 
 // Menu selection button
 
+@keyframes slideUp{
+    from{
+        transform: translateY(20px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .btn-menu{
     &__entrees, &__plats, &__desserts{
         @include btn-menu-selection;
@@ -91,5 +102,16 @@
         &--prix{
             @include btn-menu-price
         }
+    }
+    &__entrees{
+        @include animate-btn
+    }
+    &__plats{
+        @include animate-btn;
+        animation-delay: nth($delay, 1);
+    }
+    &__desserts{
+        @include animate-btn;
+        animation-delay: nth($delay, 2);
     }
 }
