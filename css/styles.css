@@ -255,11 +255,11 @@ a {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   border-radius: 25px;
+  transition: ease-out 0.7s;
 }
 .main__btn--explore:hover, .main__btn--commander:hover {
   opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
-  transition: ease 0.7s;
   cursor: pointer;
 }
 
@@ -274,6 +274,7 @@ a {
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
+  transition: ease-out 0.7s;
 }
 @media screen and (min-width: 768px) {
   .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
@@ -286,7 +287,6 @@ a {
 }
 .fct__btn--choisir:hover, .fct__btn--composer:hover, .fct__btn--deguster:hover {
   background-color: #f2eafb;
-  transition: ease 0.7s;
   cursor: pointer;
 }
 .fct__btn--choisir:hover i, .fct__btn--composer:hover i, .fct__btn--deguster:hover i {
@@ -339,16 +339,22 @@ a {
     opacity: 1;
   }
 }
+@keyframes rotate-check {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .btn-menu__entrees, .btn-menu__plats, .btn-menu__desserts {
   display: flex;
-  flex-wrap: wrap;
-  height: 20%;
-  width: 100%;
   margin: 10px 0;
-  padding: 13px;
   box-shadow: 0px 5px 10px rgba(200, 199, 199, 0.8);
   background-color: white;
   border-radius: 15px;
+  overflow: hidden;
+  transition: ease-out 0.7s;
 }
 @media screen and (min-width: 768px) {
   .btn-menu__entrees, .btn-menu__plats, .btn-menu__desserts {
@@ -358,22 +364,36 @@ a {
 .btn-menu__entrees:hover, .btn-menu__plats:hover, .btn-menu__desserts:hover {
   opacity: 80%;
   box-shadow: 0 5px 5px rgba(149, 148, 148, 0.8);
-  transition: ease 0.7s;
+  cursor: pointer;
 }
-.btn-menu__entrees--title, .btn-menu__plats--title, .btn-menu__desserts--title {
+.btn-menu__entrees:hover > .btn-menu__icon--check, .btn-menu__plats:hover > .btn-menu__icon--check, .btn-menu__desserts:hover > .btn-menu__icon--check {
+  margin-right: 0;
+}
+.btn-menu__entrees:hover > .btn-menu__icon--check i, .btn-menu__plats:hover > .btn-menu__icon--check i, .btn-menu__desserts:hover > .btn-menu__icon--check i {
+  animation: 1s rotate-check linear;
+}
+.btn-menu__text--title {
   font-weight: 700;
   font-size: 110%;
-  width: 90%;
+  width: 100%;
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.btn-menu__entrees--description, .btn-menu__plats--description, .btn-menu__desserts--description {
+.btn-menu__text--description {
   font-size: 90%;
-  width: 90%;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.btn-menu__entrees--prix, .btn-menu__plats--prix, .btn-menu__desserts--prix {
+.btn-menu__text--prix {
   height: 100%;
+  width: 15%;
   font-weight: 700;
   font-size: 90%;
+  align-self: flex-end;
+  text-align: center;
+  padding: 15px 0px;
 }
 .btn-menu__entrees {
   animation: slideUp 1s backwards;
@@ -385,6 +405,31 @@ a {
 .btn-menu__desserts {
   animation: slideUp 1s backwards;
   animation-delay: 2s;
+}
+
+.btn-menu__text {
+  width: 85%;
+  padding: 15px 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-menu__icon--check {
+  background: #99E2D0;
+  width: 20%;
+  margin-right: -25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin-right 1s ease-in-out;
+}
+
+.fa-circle-check {
+  font-size: 150%;
+  color: white;
+  background: #99E2D0;
 }
 
 .main {
@@ -442,6 +487,71 @@ a {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+  }
+}
+
+body__index {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(120, 119, 119);
+  text-align: center;
+  animation: 1s linear 2s loading-spinner forwards;
+  /**
+   * ----------------------------------------
+   * animation flip-vertical-right
+   * ----------------------------------------
+   */
+}
+.loader__logo {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 300%;
+}
+.loader__icon {
+  font-size: 400%;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: ease 0.7s;
+  -webkit-animation: turn-fork 1s linear infinite both;
+  animation: turn-fork 1s linear infinite both;
+}
+@keyframes loading-spinner {
+  from {
+    opacity: 100%;
+    z-index: 99999;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes turn-fork {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes turn-fork {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
@@ -743,10 +853,10 @@ a {
 .far.fa-heart:hover {
   font-weight: bold;
   background: linear-gradient(#FF79DA, #9356DC);
-  transition: ease 0.7s;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: ease 0.7s;
 }
 
 footer {
