@@ -1,4 +1,4 @@
-// Transform
+// TRANSFORM AND ANIMATION
 //__________
 @mixin transition-index{
     transition: ease-out 0.7s;   
@@ -17,7 +17,22 @@
     transition: ease 0.7s;
 }
 
-// shortcuts
+@mixin animate-load-logo {
+    -webkit-animation: turn-element 1s linear infinite both;
+    animation: turn-element 1s linear infinite both;
+}
+
+@mixin animate-load-icon{
+    -webkit-animation: turn-element 1.5s linear infinite both;
+    animation: turn-element 1.5s linear infinite both;
+}
+
+// menu
+@mixin animate-btn {
+    animation: slideUp 1s backwards;
+}
+
+// SHORTCUTS
 //___________
 @mixin adjust-offset{
     position: relative;
@@ -225,9 +240,3 @@
     transition: margin-right 1s ease-in-out;
 }
 
-// ANIMATIONS
-// menu
-
-@mixin animate-btn {
-    animation: slideUp 1s backwards;
-}

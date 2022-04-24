@@ -1,5 +1,6 @@
 // RESTAURANT CARDS
 
+// Restaurant section
 #card-restaurants{
   display: flex;
   flex-direction: column;
@@ -15,10 +16,9 @@
   }
 }
   
-
 .card{
-  &__link{
-    &--palette, &--enchantee, &--francaise, &--delice{
+  &__restaurant{
+    &--link{
       height: 250px;
       width: 320px;  
       margin: 10px 0;
@@ -31,43 +31,7 @@
         height: 350px;
       }
     }
-  }
-  &__description{
-    &--palette, &--enchantee, &--francaise, &--delice{  
-      background-color: $white;
-      border-bottom-left-radius: $b-radius-card;
-      border-bottom-right-radius: $b-radius-card;          
-      display: flex;
-      justify-content: space-between; 
-      align-items: center;
-      padding: 15px;
-      @include desktop-screen{
-        height: 30%;
-      }
-    }
-  }
-  &__icon--heart{
-    font-size: 150%;
-  }
-}
-
-.first_letter{
-    text-transform: uppercase;
-}
-  
-.restaurants{
-  &__title{
-    @include main_title_font;
-    position: relative;
-    right: 95px;
-    @include tablet-screen{
-      width: 100%;
-      right: 0;
-      text-align: center;
-    }
-  }
-  &__card{
-    &--palette, &--enchantee, &--francaise, &--delice{
+    &--content{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -83,9 +47,8 @@
         height: 100%;
       }
     }
-
   }
-  &__new{
+  &__label--new{
     width: 70px;
     padding: 5px;
     text-align: center;
@@ -102,21 +65,53 @@
       top: 15px;
     }
   }
-  &__img{
-    &--palette, &--enchantee, &--francaise, &--delice{
-      height: 70%;
-      width: 100%;
-      overflow: hidden;
-      border-top-right-radius: $b-radius-card;
-      border-top-left-radius: $b-radius-card;
-      object-position: 0 0;
+  &__container--img{
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: $b-radius-card;
+    border-top-left-radius: $b-radius-card;
+    object-position: 0 0;
+    @include desktop-screen{
+      height: 75%;
+    }
+  }
+  &__description{ //Contain text and icon 
+    background-color: $white;
+    border-bottom-left-radius: $b-radius-card;
+    border-bottom-right-radius: $b-radius-card;          
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px;
+    @include desktop-screen{
+      height: 30%;
+    }
+    &--title{
+      font-weight: 900;
+      font-size: 120%;
+      margin: 0;
       @include desktop-screen{
-        height: 75%;
+        font-size: 130%;
+        margin-bottom: 10px;
       }
     }
-
+    &--location{
+      font-size: 110%;
+      @include desktop-screen{
+        font-size: 120%;
+      }
+    }
+    &--icon{
+      font-size: 150%;
+    }
   }
 }
+
+.first_letter{
+    text-transform: uppercase;
+}
+
 
 .img{
   &--palette, &--enchantee, &--francaise, &--delice{
@@ -126,38 +121,12 @@
   }
 }
 
-.description{
-  &__title{
-    &--palette, &--enchantee, &--francaise, &--delice{
-      font-weight: 900;
-      font-size: 120%;
-      margin: 0;
-      @include desktop-screen{
-        font-size: 130%;
-        margin-bottom: 10px;
-      }
-    }
-  }
-  &__location{
-    &--palette, &--enchantee, &--francaise, &--delice{
-      font-size: 110%;
-      @include desktop-screen{
-        font-size: 120%;
-      }
-    }
-  }    
-}
-
 .far.fa-heart{
   @include desktop-screen{
     font-size: 110%;
   }
   &:hover{
     font-weight: bold;
-    background: linear-gradient($color-secondary,$color-primary);
-    transition: ease 0.7s;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    @include bg-gradient-clip
   }
 }

@@ -432,6 +432,81 @@ a {
   background: #99E2D0;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: linear 3s loading-spinner forwards;
+  /**
+   * ----------------------------------------
+   * animation flip-vertical-right
+   * ----------------------------------------
+   */
+  /**
+   * ----------------------------------------
+   * animation flip-vertical-right
+   * ----------------------------------------
+   */
+}
+.loader__logo {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 300%;
+  color: white;
+  -webkit-animation: turn-element 1s linear infinite both;
+  animation: turn-element 1s linear infinite both;
+}
+.loader__icon {
+  font-size: 400%;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: ease 0.7s;
+  -webkit-animation: turn-element 1.5s linear infinite both;
+  animation: turn-element 1.5s linear infinite both;
+}
+@keyframes loading-spinner {
+  0% {
+    z-index: 9999;
+    cursor: wait;
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0%;
+    z-index: -20;
+    visibility: hidden;
+    cursor: auto;
+  }
+}
+@-webkit-keyframes turn-element {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes turn-element {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -490,68 +565,17 @@ a {
   }
 }
 
-body__index {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
+.restaurant__title {
+  font-size: 150%;
+  font-weight: 900;
+  position: relative;
+  right: 95px;
 }
-
-.loader {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(120, 119, 119);
-  text-align: center;
-  animation: 1s linear 2s loading-spinner forwards;
-  /**
-   * ----------------------------------------
-   * animation flip-vertical-right
-   * ----------------------------------------
-   */
-}
-.loader__logo {
-  font-family: "shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 300%;
-}
-.loader__icon {
-  font-size: 400%;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: ease 0.7s;
-  -webkit-animation: turn-fork 1s linear infinite both;
-  animation: turn-fork 1s linear infinite both;
-}
-@keyframes loading-spinner {
-  from {
-    opacity: 100%;
-    z-index: 99999;
-  }
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@-webkit-keyframes turn-fork {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-@keyframes turn-fork {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+@media screen and (min-width: 768px) {
+  .restaurant__title {
+    width: 100%;
+    right: 0;
+    text-align: center;
   }
 }
 
@@ -716,59 +740,24 @@ body__index {
   }
 }
 
-.card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+.card__restaurant--link {
   height: 250px;
   width: 320px;
   margin: 10px 0;
 }
 @media screen and (min-width: 768px) {
-  .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+  .card__restaurant--link {
     width: 330px;
     margin: 30px 10px;
   }
 }
 @media screen and (min-width: 992px) {
-  .card__link--palette, .card__link--enchantee, .card__link--francaise, .card__link--delice {
+  .card__restaurant--link {
     width: 70%;
     height: 350px;
   }
 }
-.card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
-  background-color: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-@media screen and (min-width: 992px) {
-  .card__description--palette, .card__description--enchantee, .card__description--francaise, .card__description--delice {
-    height: 30%;
-  }
-}
-.card__icon--heart {
-  font-size: 150%;
-}
-
-.first_letter {
-  text-transform: uppercase;
-}
-
-.restaurants__title {
-  font-size: 150%;
-  font-weight: 900;
-  position: relative;
-  right: 95px;
-}
-@media screen and (min-width: 768px) {
-  .restaurants__title {
-    width: 100%;
-    right: 0;
-    text-align: center;
-  }
-}
-.restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
+.card__restaurant--content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -781,12 +770,12 @@ body__index {
   border-radius: 15px;
 }
 @media screen and (min-width: 992px) {
-  .restaurants__card--palette, .restaurants__card--enchantee, .restaurants__card--francaise, .restaurants__card--delice {
+  .card__restaurant--content {
     max-width: unset;
     height: 100%;
   }
 }
-.restaurants__new {
+.card__label--new {
   width: 70px;
   padding: 5px;
   text-align: center;
@@ -800,12 +789,12 @@ body__index {
   border-radius: 2px;
 }
 @media screen and (min-width: 992px) {
-  .restaurants__new {
+  .card__label--new {
     right: 20px;
     top: 15px;
   }
 }
-.restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
+.card__container--img {
   height: 70%;
   width: 100%;
   overflow: hidden;
@@ -814,35 +803,55 @@ body__index {
   object-position: 0 0;
 }
 @media screen and (min-width: 992px) {
-  .restaurants__img--palette, .restaurants__img--enchantee, .restaurants__img--francaise, .restaurants__img--delice {
+  .card__container--img {
     height: 75%;
   }
+}
+.card__description {
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+@media screen and (min-width: 992px) {
+  .card__description {
+    height: 30%;
+  }
+}
+.card__description--title {
+  font-weight: 900;
+  font-size: 120%;
+  margin: 0;
+}
+@media screen and (min-width: 992px) {
+  .card__description--title {
+    font-size: 130%;
+    margin-bottom: 10px;
+  }
+}
+.card__description--location {
+  font-size: 110%;
+}
+@media screen and (min-width: 992px) {
+  .card__description--location {
+    font-size: 120%;
+  }
+}
+.card__description--icon {
+  font-size: 150%;
+}
+
+.first_letter {
+  text-transform: uppercase;
 }
 
 .img--palette, .img--enchantee, .img--francaise, .img--delice {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.description__title--palette, .description__title--enchantee, .description__title--francaise, .description__title--delice {
-  font-weight: 900;
-  font-size: 120%;
-  margin: 0;
-}
-@media screen and (min-width: 992px) {
-  .description__title--palette, .description__title--enchantee, .description__title--francaise, .description__title--delice {
-    font-size: 130%;
-    margin-bottom: 10px;
-  }
-}
-.description__location--palette, .description__location--enchantee, .description__location--francaise, .description__location--delice {
-  font-size: 110%;
-}
-@media screen and (min-width: 992px) {
-  .description__location--palette, .description__location--enchantee, .description__location--francaise, .description__location--delice {
-    font-size: 120%;
-  }
 }
 
 @media screen and (min-width: 992px) {

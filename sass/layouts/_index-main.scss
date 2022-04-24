@@ -1,4 +1,78 @@
-//main content of index file
+//LOADING SPINNER
+
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: linear 3s loading-spinner forwards;
+  &__logo{
+    font-family: 'shrikhand',Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    color: $white;
+    @include animate-load-logo;
+  }
+  &__icon{
+    font-size: 400%;
+    @include bg-gradient-clip;
+    @include animate-load-icon;
+}
+/**
+ * ----------------------------------------
+ * animation flip-vertical-right
+ * ----------------------------------------
+ */
+@keyframes loading-spinner{
+  0%{
+    z-index: 9999;
+    cursor: wait;
+    opacity: 100%;
+  }
+  50%{
+  opacity: 50%;
+  }
+  100%{
+    opacity: 0%;
+    z-index: -20;
+    visibility: hidden;
+    cursor: auto;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation flip-vertical-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes turn-element {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes turn-element {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+}
+
+
+// MAIN CONTENT OF INDEX PAGE
+
 .main{
   display: flex;
   flex-direction: column;
@@ -48,5 +122,16 @@
         text-align: center;
         margin-bottom: 10px;
       }
+  }
+}
+  
+.restaurant__title{
+  @include main_title_font;
+  position: relative;
+  right: 95px;
+  @include tablet-screen{
+    width: 100%;
+    right: 0;
+    text-align: center;
   }
 }
