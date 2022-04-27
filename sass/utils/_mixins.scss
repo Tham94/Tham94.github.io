@@ -11,11 +11,13 @@
 
 @mixin animate-load-logo {
     -webkit-animation: turn-element 1s linear infinite both;
+    -moz-animation: turn-element 1s linear infinite both ;
     animation: turn-element 1s linear infinite both;
 }
 
 @mixin animate-load-icon{
     -webkit-animation: turn-element 1.5s linear infinite both;
+    -moz-animation: turn-element 1.5s linear infinite both ;
     animation: turn-element 1.5s linear infinite both;
 }
 

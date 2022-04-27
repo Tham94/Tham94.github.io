@@ -16,10 +16,32 @@
             margin-right: auto;
         }
     }
-    &__menu{
+    &__restaurant{
         background: $bg-color-main;
     }      
 }
+
+// RESTAURANT TITLE
+
+.restaurant__title{ 
+    @include restaurant-title;
+    & h1{
+    @include font-family-style;
+    font-weight: 400;
+    font-size: $size-btn-num;
+    }
+    & i{
+        font-size: 150%;
+    }
+    @include tablet-screen{
+    & i{
+        margin: 0 20px;
+    }
+    width: 100%;
+    }
+}
+
+//MENU STYLES
 
 .menu{
     &__container--img{
@@ -27,31 +49,15 @@
         width: 100%;
         overflow: hidden;
     }
-    &__title{ // RESTAURANT TITLE
-        &--palette, &--enchantee, &--francaise, &--delice{
-           @include restaurant-title;
-           & h1{
-            @include font-family-style;
-            font-weight: 400;
-            font-size: $size-btn-num;
-           }
-           @include tablet-screen{
-            & i{
-                margin: 0 20px;
-            }
-            width: 100%;
-           }
-        }
+    &__entrees, &__plats, &__desserts{
+        @include menu-section;
+    }
+    &__title{
         &--entrees, &--plats, &--desserts{ // TYPE OF MENU TITLE
             @include menu-type-title;
             margin-bottom: 10px
         } 
-    }
-    &__entrees, &__plats, &__desserts{
-        &--palette, &--enchantee, &--francaise, &--delice{
-            @include menu-section;
-        }
-    }    
+    } 
 }
 
 

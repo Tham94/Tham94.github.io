@@ -24,21 +24,18 @@
     }        
 }
 
-// Header for menu pages
+// Header for restaurant pages
 .header{
     &__icon--return{
         font-size: 120%;
         padding: 15px;
         position: absolute;
-        
     } 
-    &__menu{
-        &--palette, &--enchantee, &--francaise, &--delice{
-            display: flex;
-            align-items: center;
-            height: 65px;
-            width: 100%;
-        }
+    &__restaurant{
+        display: flex;
+        align-items: center;
+        height: 65px;
+        width: 100%;
     }
        
 }

@@ -432,7 +432,7 @@ a {
   background: #99E2D0;
 }
 
-.card__description--icon {
+.heart {
   position: relative;
   width: 30px;
   height: 30px;
@@ -440,42 +440,39 @@ a {
 }
 
 @media screen and (min-width: 992px) {
-  .far.fa-heart {
+  .fa-heart {
     font-size: 110%;
   }
 }
 
-.coeur-vide {
+.heart__empty {
   position: absolute;
   left: 0;
 }
 
-.coeur-plein {
+.heart__full {
   background: linear-gradient(#9356DC, #FF79DA);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   visibility: hidden;
 }
 
-.card__description--icon:hover > .coeur-vide {
-  visibility: hidden;
-}
-
-.card__description--icon:hover > .coeur-plein {
+.heart:hover > .heart__full {
   visibility: visible;
-  animation: 0.3s heart ease-in-out forwards;
+  animation: 0.3s filling-heart ease-in-out forwards;
   transform-origin: bottom;
   cursor: pointer;
   font-weight: bold;
 }
 
-@keyframes heart {
+@keyframes filling-heart {
   from {
     transform: scaleX(0) scaleY(0);
   }
   to {
-    transform: scaleX(1) scaleY(1);
+    transform: scaleX(1.1) scaleY(1.1);
   }
 }
 .loader {
@@ -504,11 +501,14 @@ a {
   font-size: 300%;
   color: white;
   -webkit-animation: turn-element 1s linear infinite both;
+  -moz-animation: turn-element 1s linear infinite both;
   animation: turn-element 1s linear infinite both;
 }
 .loader__icon {
   font-size: 400%;
+  color: #9356DC;
   -webkit-animation: turn-element 1.5s linear infinite both;
+  -moz-animation: turn-element 1.5s linear infinite both;
   animation: turn-element 1.5s linear infinite both;
 }
 @keyframes loading-spinner {
@@ -516,9 +516,6 @@ a {
     z-index: 9999;
     cursor: wait;
     opacity: 100%;
-  }
-  50% {
-    opacity: 50%;
   }
   100% {
     opacity: 0%;
@@ -606,14 +603,14 @@ a {
   }
 }
 
-.restaurant__title {
+.card__restaurant--title {
   font-size: 150%;
   font-weight: 900;
   position: relative;
   right: 95px;
 }
 @media screen and (min-width: 768px) {
-  .restaurant__title {
+  .card__restaurant--title {
     width: 100%;
     right: 0;
     text-align: center;
@@ -633,16 +630,11 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.main__menu {
+.main__restaurant {
   background: #F6F6F6;
 }
 
-.menu__container--img {
-  height: 250px;
-  width: 100%;
-  overflow: hidden;
-}
-.menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+.restaurant__title {
   background-color: #F6F6F6;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -655,23 +647,42 @@ a {
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+  .restaurant__title {
     padding-left: 30px;
     padding-right: 30px;
     justify-content: center;
   }
 }
-.menu__title--palette h1, .menu__title--enchantee h1, .menu__title--francaise h1, .menu__title--delice h1 {
+.restaurant__title h1 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1.8em;
 }
+.restaurant__title i {
+  font-size: 150%;
+}
 @media screen and (min-width: 768px) {
-  .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
+  .restaurant__title {
     width: 100%;
   }
-  .menu__title--palette i, .menu__title--enchantee i, .menu__title--francaise i, .menu__title--delice i {
+  .restaurant__title i {
     margin: 0 20px;
+  }
+}
+
+.menu__container--img {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__entrees, .menu__plats, .menu__desserts {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .menu__entrees, .menu__plats, .menu__desserts {
+    align-items: center;
   }
 }
 .menu__title--entrees, .menu__title--plats, .menu__title--desserts {
@@ -695,16 +706,6 @@ a {
     margin: auto;
     position: relative;
     top: 5px;
-  }
-}
-.menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice, .menu__plats--palette, .menu__plats--enchantee, .menu__plats--francaise, .menu__plats--delice, .menu__desserts--palette, .menu__desserts--enchantee, .menu__desserts--francaise, .menu__desserts--delice {
-  padding: 0 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .menu__entrees--palette, .menu__entrees--enchantee, .menu__entrees--francaise, .menu__entrees--delice, .menu__plats--palette, .menu__plats--enchantee, .menu__plats--francaise, .menu__plats--delice, .menu__desserts--palette, .menu__desserts--enchantee, .menu__desserts--francaise, .menu__desserts--delice {
-    align-items: center;
   }
 }
 
@@ -757,7 +758,7 @@ a {
   padding: 15px;
   position: absolute;
 }
-.header__menu--palette, .header__menu--enchantee, .header__menu--francaise, .header__menu--delice {
+.header__restaurant {
   display: flex;
   align-items: center;
   height: 65px;
