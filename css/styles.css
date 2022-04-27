@@ -432,6 +432,52 @@ a {
   background: #99E2D0;
 }
 
+.card__description--icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .far.fa-heart {
+    font-size: 110%;
+  }
+}
+
+.coeur-vide {
+  position: absolute;
+  left: 0;
+}
+
+.coeur-plein {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  visibility: hidden;
+}
+
+.card__description--icon:hover > .coeur-vide {
+  visibility: hidden;
+}
+
+.card__description--icon:hover > .coeur-plein {
+  visibility: visible;
+  animation: 0.3s heart ease-in-out forwards;
+  transform-origin: bottom;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes heart {
+  from {
+    transform: scaleX(0) scaleY(0);
+  }
+  to {
+    transform: scaleX(1) scaleY(1);
+  }
+}
 .loader {
   position: fixed;
   width: 100%;
@@ -444,7 +490,7 @@ a {
   animation: linear 3s loading-spinner forwards;
   /**
    * ----------------------------------------
-   * animation flip-vertical-right
+   * animation loading-spinner
    * ----------------------------------------
    */
   /**
@@ -462,11 +508,6 @@ a {
 }
 .loader__icon {
   font-size: 400%;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: ease 0.7s;
   -webkit-animation: turn-element 1.5s linear infinite both;
   animation: turn-element 1.5s linear infinite both;
 }
@@ -602,8 +643,6 @@ a {
   overflow: hidden;
 }
 .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
-  font-family: "shrikhand", Arial, Helvetica, sans-serif;
-  font-weight: 400;
   background-color: #F6F6F6;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -611,7 +650,6 @@ a {
   bottom: 35px;
   margin: 0;
   padding: 20px 20px 0 20px;
-  font-size: 1.8em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -622,6 +660,11 @@ a {
     padding-right: 30px;
     justify-content: center;
   }
+}
+.menu__title--palette h1, .menu__title--enchantee h1, .menu__title--francaise h1, .menu__title--delice h1 {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
 }
 @media screen and (min-width: 768px) {
   .menu__title--palette, .menu__title--enchantee, .menu__title--francaise, .menu__title--delice {
@@ -854,20 +897,6 @@ a {
   object-fit: cover;
 }
 
-@media screen and (min-width: 992px) {
-  .far.fa-heart {
-    font-size: 110%;
-  }
-}
-.far.fa-heart:hover {
-  font-weight: bold;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: ease 0.7s;
-}
-
 footer {
   padding: 20px;
   height: 190px;
@@ -896,7 +925,7 @@ footer i {
 }
 
 .footer__title {
-  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 110%;
   font-weight: 400;
   margin: 0 0 10px 0;

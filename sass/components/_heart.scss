@@ -1,0 +1,41 @@
+.card__description--icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+.far.fa-heart{
+    @include desktop-screen{
+      font-size: 110%;
+    }
+  }
+.coeur-vide{
+    position: absolute;
+    left: 0;
+}
+.coeur-plein{
+    background: linear-gradient(#9356DC,#FF79DA);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    visibility: hidden;
+}
+.card__description--icon:hover > .coeur-vide{
+    visibility: hidden;
+}
+.card__description--icon:hover > .coeur-plein{
+    visibility: visible;
+    animation: 0.3s heart ease-in-out forwards;
+    transform-origin: bottom;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes heart{
+    from{
+        transform: scaleX(0) scaleY(0);
+    }
+    to{
+        transform: scaleX(1) scaleY(1);
+    }
+}

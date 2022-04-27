@@ -25,7 +25,7 @@ footer i{
 
 .footer{
     &__title{
-        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+        @include font-family-style;
         font-size: 110%;
         font-weight: 400;
         margin: 0 0 10px 0;

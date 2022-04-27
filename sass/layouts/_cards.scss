@@ -121,12 +121,3 @@
   }
 }
 
-.far.fa-heart{
-  @include desktop-screen{
-    font-size: 110%;
-  }
-  &:hover{
-    font-weight: bold;
-    @include bg-gradient-clip
-  }
-}

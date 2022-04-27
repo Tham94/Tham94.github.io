@@ -30,6 +30,11 @@
     &__title{ // RESTAURANT TITLE
         &--palette, &--enchantee, &--francaise, &--delice{
            @include restaurant-title;
+           & h1{
+            @include font-family-style;
+            font-weight: 400;
+            font-size: $size-btn-num;
+           }
            @include tablet-screen{
             & i{
                 margin: 0 20px;

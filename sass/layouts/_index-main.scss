@@ -11,19 +11,18 @@
   justify-content: center;
   animation: linear 3s loading-spinner forwards;
   &__logo{
-    font-family: 'shrikhand',Arial, Helvetica, sans-serif;
+    @include font-family-style;
     font-size: 300%;
     color: $white;
     @include animate-load-logo;
   }
   &__icon{
     font-size: 400%;
-    @include bg-gradient-clip;
     @include animate-load-icon;
 }
 /**
  * ----------------------------------------
- * animation flip-vertical-right
+ * animation loading-spinner
  * ----------------------------------------
  */
 @keyframes loading-spinner{

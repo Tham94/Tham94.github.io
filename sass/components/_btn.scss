@@ -33,7 +33,9 @@
 
 .btn{
     &__num{
+        &--1, &--2, &--3{
         @include num__btn
+        }
     }
     &__icon{
         &--tel, &--list, &--resto{

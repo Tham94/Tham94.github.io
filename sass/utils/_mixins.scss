@@ -9,14 +9,6 @@
     box-shadow: 0 5px 5px darken($shadow-color-btn, 20);
 }
 
-@mixin bg-gradient-clip{
-    background: linear-gradient($color-secondary,$color-primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: ease 0.7s;
-}
-
 @mixin animate-load-logo {
     -webkit-animation: turn-element 1s linear infinite both;
     animation: turn-element 1s linear infinite both;
@@ -34,6 +26,11 @@
 
 // SHORTCUTS
 //___________
+
+@mixin font-family-style {
+    font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+}
+
 @mixin adjust-offset{
     position: relative;
     bottom: 50px;
@@ -104,8 +101,7 @@
 }
 
 // numbers
-@mixin num__btn {
-    &--1, &--2, &--3{
+@mixin num__btn {    
         width: $size-btn-num;
         height: $size-btn-num;
         margin: -10px;
@@ -115,7 +111,6 @@
         border-radius: 50%;
         font-size: 80%;
         text-align: center;
-    }
 }
 
 //icon
@@ -129,15 +124,12 @@
 // RESTAURANT TITLE
 //__________________
 @mixin restaurant-title {
-    font-family: 'shrikhand',Arial, Helvetica, sans-serif;
-    font-weight: 400;
     background-color: $bg-color-main;
     @include title-b-radius;
     position: relative;
     bottom: 35px;
     margin: 0;
     padding: 20px 20px 0 20px;
-    font-size: $size-btn-num;
     display: flex;
     justify-content: space-between;
     align-items: center;
