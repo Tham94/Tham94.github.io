@@ -48,7 +48,7 @@
       }
     }
   }
-  &__label--new{
+  &__label{
     width: 70px;
     padding: 5px;
     text-align: center;
@@ -65,7 +65,7 @@
       top: 15px;
     }
   }
-  &__container--img{
+  &__image-container{
     height: 70%;
     width: 100%;
     overflow: hidden;
@@ -74,6 +74,11 @@
     object-position: 0 0;
     @include desktop-screen{
       height: 75%;
+    }
+    & img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
   &__description{ //Contain text and icon 
@@ -108,16 +113,7 @@
   }
 }
 
-.first_letter{
+// making "à" capitalized
+.first_letter{ 
     text-transform: uppercase;
 }
-
-
-.img{
-  &--palette, &--enchantee, &--francaise, &--delice{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-

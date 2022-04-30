@@ -13,49 +13,39 @@
 // Fonctionnement button
 
 .fct__btn{
-    &--choisir, &--composer, &--deguster{
-        @include fct__btn;
-        @include transition-index;
-        &:hover{
-            background-color: lighten($color-primary,35);
-            cursor: pointer;
-            & i{
-                color: $color-primary;
-            }
+    @include fct__btn;
+    @include transition-index;
+    &:hover{
+        background-color: lighten($color-primary,35);
+        cursor: pointer;
+        & i{
+            color: $color-primary;
         }
+    }
+    @include tablet-screen{
+        height: 100px;
+        width: 200px;
+        justify-content: flex-start;
+    }
+    &--num{
+        @include num__btn;
+
+    }
+    &--icon{
+        @include icon__btn;
         @include tablet-screen{
-            height: 100px;
-            width: 200px;
-            justify-content: flex-start;
-        }
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        font-size: 150%;
+        margin: 0;
+    }
+    &--text{
+        font-weight: 700;
     }
 }
-
-.btn{
-    &__num{
-        &--1, &--2, &--3{
-        @include num__btn
-        }
-    }
-    &__icon{
-        &--tel, &--list, &--resto{
-            @include icon__btn;
-            @include tablet-screen{
-                width: 100%;
-                padding: 15px;
-                text-align: center;
-                font-size: 150%;
-                margin: 0;
-            }
-        }
-
-    }
-    &__text{
-        &--choisir, &--composer, &--deguster{
-            font-weight: 700;
-        }
-    }
 }
+
 
 // Menu selection button
 
@@ -93,7 +83,7 @@
         &:hover > .btn-menu__icon--check{
             margin-right: 0;
             & i{
-                animation: 1s rotate-check linear;
+                animation: 0.6s rotate-check 0.2s linear;
             }
         }
     }

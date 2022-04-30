@@ -16,11 +16,22 @@ footer{
         height: auto;
         font-size: 120%;
     }
+    & a{
+        font-size: 90%;
+        margin: 5px 0;
+        @include desktop-screen{
+            margin: 5px 15px;
+        }
+        & i{
+            margin-right: 10px;
+            font-size: 80%;
+            }
+    }
 }
 
-footer i{
-    margin-right: 10px;
-    font-size: 80%;
+.fa-handshake-angle{
+    transform: rotate(-10deg);
+
 }
 
 .footer{
@@ -31,20 +42,6 @@ footer i{
         margin: 0 0 10px 0;
         @include desktop-screen{
             width: 100%;
-        }
-    }
-    &__link{
-        &--partenaire, &--propose, &--mentions, &--contact{
-            font-size: 90%;
-            margin: 5px 0;
-            @include desktop-screen{
-                margin: 5px 15px;
-            }
-        }
-        &--partenaire{
-            & i{
-                transform: rotate(-10deg);
-            }
         }
     }
 }

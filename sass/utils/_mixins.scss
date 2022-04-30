@@ -42,7 +42,10 @@
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
 }
-
+@mixin margin-lr-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
 // MEDIA QUERIES
 //_______________
 @mixin tablet-screen{
@@ -104,15 +107,15 @@
 
 // numbers
 @mixin num__btn {    
-        width: $size-btn-num;
-        height: $size-btn-num;
-        margin: -10px;
-        line-height: 180%;
-        color:$white;
-        background-color: $color-primary;
-        border-radius: 50%;
-        font-size: 80%;
-        text-align: center;
+    width: $size-btn-num;
+    height: $size-btn-num;
+    margin: -10px;
+    line-height: 180%;
+    color:$white;
+    background-color: $color-primary;
+    border-radius: 50%;
+    font-size: 80%;
+    text-align: center;
 }
 
 //icon

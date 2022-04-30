@@ -263,7 +263,7 @@ a {
   cursor: pointer;
 }
 
-.fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
+.fct__btn {
   height: 70px;
   width: 100%;
   max-width: 320px;
@@ -277,7 +277,7 @@ a {
   transition: ease-out 0.7s;
 }
 @media screen and (min-width: 768px) {
-  .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
+  .fct__btn {
     flex-flow: column;
     justify-content: center;
     height: 150px;
@@ -285,22 +285,21 @@ a {
     max-width: unset;
   }
 }
-.fct__btn--choisir:hover, .fct__btn--composer:hover, .fct__btn--deguster:hover {
+.fct__btn:hover {
   background-color: #f2eafb;
   cursor: pointer;
 }
-.fct__btn--choisir:hover i, .fct__btn--composer:hover i, .fct__btn--deguster:hover i {
+.fct__btn:hover i {
   color: #9356DC;
 }
 @media screen and (min-width: 768px) {
-  .fct__btn--choisir, .fct__btn--composer, .fct__btn--deguster {
+  .fct__btn {
     height: 100px;
     width: 200px;
     justify-content: flex-start;
   }
 }
-
-.btn__num--1, .btn__num--2, .btn__num--3 {
+.fct__btn--num {
   width: 1.8em;
   height: 1.8em;
   margin: -10px;
@@ -311,13 +310,13 @@ a {
   font-size: 80%;
   text-align: center;
 }
-.btn__icon--tel, .btn__icon--list, .btn__icon--resto {
+.fct__btn--icon {
   margin: 0 25px 0 35px;
   font-size: 110%;
   color: rgb(105, 105, 105);
 }
 @media screen and (min-width: 768px) {
-  .btn__icon--tel, .btn__icon--list, .btn__icon--resto {
+  .fct__btn--icon {
     width: 100%;
     padding: 15px;
     text-align: center;
@@ -325,7 +324,7 @@ a {
     margin: 0;
   }
 }
-.btn__text--choisir, .btn__text--composer, .btn__text--deguster {
+.fct__btn--icon--text {
   font-weight: 700;
 }
 
@@ -370,7 +369,7 @@ a {
   margin-right: 0;
 }
 .btn-menu__entrees:hover > .btn-menu__icon--check i, .btn-menu__plats:hover > .btn-menu__icon--check i, .btn-menu__desserts:hover > .btn-menu__icon--check i {
-  animation: 1s rotate-check linear;
+  animation: 0.6s rotate-check 0.2s linear;
 }
 .btn-menu__text--title {
   font-weight: 700;
@@ -519,7 +518,7 @@ a {
   }
   100% {
     opacity: 0%;
-    z-index: -20;
+    z-index: -1;
     visibility: hidden;
     cursor: auto;
   }
@@ -572,8 +571,8 @@ a {
 .fonctionnement {
   width: 90%;
   max-width: 320px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding: 45px 0px;
   display: flex;
   flex-direction: column;
@@ -627,8 +626,8 @@ a {
   padding: 20px 0 50px 0;
 }
 .main__btn--commander {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 .main__restaurant {
   background: #F6F6F6;
@@ -819,7 +818,7 @@ a {
     height: 100%;
   }
 }
-.card__label--new {
+.card__label {
   width: 70px;
   padding: 5px;
   text-align: center;
@@ -833,12 +832,12 @@ a {
   border-radius: 2px;
 }
 @media screen and (min-width: 992px) {
-  .card__label--new {
+  .card__label {
     right: 20px;
     top: 15px;
   }
 }
-.card__container--img {
+.card__image-container {
   height: 70%;
   width: 100%;
   overflow: hidden;
@@ -847,9 +846,14 @@ a {
   object-position: 0 0;
 }
 @media screen and (min-width: 992px) {
-  .card__container--img {
+  .card__image-container {
     height: 75%;
   }
+}
+.card__image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .card__description {
   background-color: white;
@@ -892,12 +896,6 @@ a {
   text-transform: uppercase;
 }
 
-.img--palette, .img--enchantee, .img--francaise, .img--delice {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 footer {
   padding: 20px;
   height: 190px;
@@ -919,10 +917,22 @@ footer {
     font-size: 120%;
   }
 }
-
-footer i {
+footer a {
+  font-size: 90%;
+  margin: 5px 0;
+}
+@media screen and (min-width: 992px) {
+  footer a {
+    margin: 5px 15px;
+  }
+}
+footer a i {
   margin-right: 10px;
   font-size: 80%;
+}
+
+.fa-handshake-angle {
+  transform: rotate(-10deg);
 }
 
 .footer__title {
@@ -935,18 +945,6 @@ footer i {
   .footer__title {
     width: 100%;
   }
-}
-.footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
-  font-size: 90%;
-  margin: 5px 0;
-}
-@media screen and (min-width: 992px) {
-  .footer__link--partenaire, .footer__link--propose, .footer__link--mentions, .footer__link--contact {
-    margin: 5px 15px;
-  }
-}
-.footer__link--partenaire i {
-  transform: rotate(-10deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
