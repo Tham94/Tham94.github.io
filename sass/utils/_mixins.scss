@@ -33,11 +33,6 @@
     font-family: 'shrikhand', Arial, Helvetica, sans-serif;
 }
 
-@mixin adjust-offset{
-    position: relative;
-    bottom: 50px;
-}
-
 @mixin title-b-radius{
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
