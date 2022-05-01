@@ -9,65 +9,77 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: linear 3s loading-spinner forwards;
+  animation: opacity-loader 2.5s linear forwards;
   &__logo{
     @include font-family-style;
     font-size: 300%;
     color: $white;
-    @include animate-load-logo;
   }
-  &__icon{
-    font-size: 400%;
-    color: $color-primary;
-    @include animate-load-icon;
+  &__spin{
+    border-radius:100px;
+    width:100px;
+    height:100px;
+    border-top:10px solid $color-primary;
+    border-right:10px solid $color-secondary;
+    border-bottom:10px solid $color-tertiary;
+    border-left:10px solid $bg-color-main;
+    -webkit-animation:turn-loader 1.4s infinite linear;
+    -moz-animation:turn-loader 1.4s infinite linear;
+    animation:turn-loader 1.4s infinite linear;
+
+  }
 }
-/**
- * ----------------------------------------
- * animation loading-spinner
- * ----------------------------------------
- */
-@keyframes loading-spinner{
+@-webkit-keyframes turn-loader{
   0%{
+  -webkit-transform:rotate(0deg);
+  }  
+  50%{
+  -webkit-transform:rotate(360deg);
+  }  
+  100%{
+  -webkit-transform:rotate(720deg);
+  }
+} 
+  
+@-moz-keyframes turn-loader{
+  0%{
+  -moz-transform:rotate(0deg);
+  }
+  50%{
+  -moz-transform:rotate(360deg);
+  }
+  100%{
+  -moz-transform:rotate(720deg);
+  }
+}
+  
+@keyframes turn-loader{
+  0%{
+  transform:rotate(0deg)
+  }
+  50%{
+  transform:rotate(360deg)
+  }
+  100%{
+  transform:rotate(720deg)
+  }
+}
+
+@keyframes opacity-loader{
+  0%{
+    opacity: 100%;
     z-index: 9999;
     cursor: wait;
+  }
+  75%{
     opacity: 100%;
   }
   100%{
-    opacity: 0%;
+    opacity: 0;
     z-index: -1;
-    visibility: hidden;
     cursor: auto;
   }
 }
-
-/**
- * ----------------------------------------
- * animation flip-vertical-right
- * ----------------------------------------
- */
- @-webkit-keyframes turn-element {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-@keyframes turn-element {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-}
-
-
 // MAIN CONTENT OF INDEX PAGE
 
 .main{
